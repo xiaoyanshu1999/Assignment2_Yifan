@@ -22,39 +22,30 @@
 
     <div class="container" id="background">
 
-<div class="float">
+        <div id="homework_map"></div>
+
+                <script type="text/javascript">
+                    var spec =
+                        "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/visualization.vl.json";
+                    vegaEmbed('#homework_map', spec).then(function (result) {
+                        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                    }).catch(console.error);
+                </script>
 
 
-    <div id="homework_map"></div>
-
-    <script type="text/javascript">
-        var spec =
-            "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/visualization.vl.json";
-        vegaEmbed('#homework_map', spec).then(function (result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-    </script>
 
 
-</div>
 
-<div class="float">
-
-
-    <div id="homework_map"></div>
-
-    <script type="text/javascript">
-        var spec =
-            "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/visualization.vl.json";
-        vegaEmbed('#homework_map', spec).then(function (result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-    </script>
-
-
-</div>
        
-
+       
+        <div id="homework_map"></div>
+                <script type="text/javascript">
+                    var spec =
+                        "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/DomesticTouristVisits.json";
+                    vegaEmbed('#homework_map', spec).then(function (result) {
+                        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                    }).catch(console.error);
+                </script>
 
 
     </div>

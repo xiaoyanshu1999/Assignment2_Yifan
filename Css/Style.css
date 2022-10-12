@@ -1,22 +1,26 @@
 body {
     margin: 0;
-    background-image:url(../Media/Background_1.jpg) ;
+    background-image: url(../Media/Background_1.jpg);
 }
 
-#homework_map {
-    top: 100px;
-    bottom: 100px;
-    left: 100px;
-    right: 100px;
-    /*height: 1000px;
-	width: 800px;*/
-}
-
-#nihao
-{
+.container {
     height: 100%;
     width: 100%;
-    background-image:url(../Media/Background_1.jpg) ;
+    text-align: center;
+
+    padding: 50px;
+    padding-top: 10px;
+
+}
+
+
+
+
+
+#background {
+    height: 100%;
+    width: 100%;
+    background-image: url(../Media/Background_1.jpg);
     background-repeat: no-repeat;
 
     background-position-x: center;
@@ -24,56 +28,135 @@ body {
     background-position-y: center;
 
     background-size: 100% 100%;
-    animation:animatedbackground 6s infinite;
-    -moz-animation:animatedbackground 6s infinite; /* Firefox */
-    -webkit-animation:animatedbackground 6s infinite; /* Safari and Chrome */
-    -o-animation:animatedbackgroundt 6s infinite; /* Opera */
+    animation: animatedbackground 6s infinite;
+    -moz-animation: animatedbackground 6s infinite;
+    /* Firefox */
+    -webkit-animation: animatedbackground 6s infinite;
+    /* Safari and Chrome */
+    -o-animation: animatedbackgroundt 6s infinite;
+    /* Opera */
 }
 
-@keyframes animatedbackground
-{
-    0%   {background-image:url(../Media/Background_1.jpg);}
-    30%   {background-image:url(../Media/Background_1.jpg);}
-    48%  {background-image:url(../Media/Background_2.jpg);}
-    50%  {background-image:url(../Media/Background_3.jpg);}
-    62%  {background-image:url(../Media/Background_2.jpg);}
-    70%   {background-image:url(../Media/Background_1.jpg);}
-    100% {background-image:url(../Media/Background_1.jpg);}
+@keyframes animatedbackground {
+    0% {
+        background-image: url(../Media/Background_1.jpg);
+    }
+
+    30% {
+        background-image: url(../Media/Background_1.jpg);
+    }
+
+    48% {
+        background-image: url(../Media/Background_2.jpg);
+    }
+
+    50% {
+        background-image: url(../Media/Background_3.jpg);
+    }
+
+    62% {
+        background-image: url(../Media/Background_2.jpg);
+    }
+
+    70% {
+        background-image: url(../Media/Background_1.jpg);
+    }
+
+    100% {
+        background-image: url(../Media/Background_1.jpg);
+    }
 
 }
 
-@-moz-keyframes animatedbackground
-{
-    0%   {background-image:url(../Media/Background_1.jpg);}
-    30%   {background-image:url(../Media/Background_1.jpg);}
-    48%  {background-image:url(../Media/Background_2.jpg);}
-    50%  {background-image:url(../Media/Background_3.jpg);}
-    62%  {background-image:url(../Media/Background_2.jpg);}
-    70%   {background-image:url(../Media/Background_1.jpg);}
-    100% {background-image:url(../Media/Background_1.jpg);}
+@-moz-keyframes animatedbackground {
+    0% {
+        background-image: url(../Media/Background_1.jpg);
+    }
+
+    30% {
+        background-image: url(../Media/Background_1.jpg);
+    }
+
+    48% {
+        background-image: url(../Media/Background_2.jpg);
+    }
+
+    50% {
+        background-image: url(../Media/Background_3.jpg);
+    }
+
+    62% {
+        background-image: url(../Media/Background_2.jpg);
+    }
+
+    70% {
+        background-image: url(../Media/Background_1.jpg);
+    }
+
+    100% {
+        background-image: url(../Media/Background_1.jpg);
+    }
 
 }
 
-@-webkit-keyframes animatedbackground
-{
-    0%   {background-image:url(../Media/Background_1.jpg);}
-    30%   {background-image:url(../Media/Background_1.jpg);}
-    48%  {background-image:url(../Media/Background_2.jpg);}
-    50%  {background-image:url(../Media/Background_3.jpg);}
-    62%  {background-image:url(../Media/Background_2.jpg);}
-    70%   {background-image:url(../Media/Background_1.jpg);}
-    100% {background-image:url(../Media/Background_1.jpg);}
+@-webkit-keyframes animatedbackground {
+    0% {
+        background-image: url(../Media/Background_1.jpg);
+    }
+
+    30% {
+        background-image: url(../Media/Background_1.jpg);
+    }
+
+    48% {
+        background-image: url(../Media/Background_2.jpg);
+    }
+
+    50% {
+        background-image: url(../Media/Background_3.jpg);
+    }
+
+    62% {
+        background-image: url(../Media/Background_2.jpg);
+    }
+
+    70% {
+        background-image: url(../Media/Background_1.jpg);
+    }
+
+    100% {
+        background-image: url(../Media/Background_1.jpg);
+    }
 
 }
 
-@-o-keyframes animatedbackground
-{
-    0%   {background-image:url(../Media/Background_1.jpg);}
-    30%   {background-image:url(../Media/Background_1.jpg);}
-    48%  {background-image:url(../Media/Background_2.jpg);}
-    50%  {background-image:url(../Media/Background_3.jpg);}
-    62%  {background-image:url(../Media/Background_2.jpg);}
-    70%   {background-image:url(../Media/Background_1.jpg);}
-    100% {background-image:url(../Media/Background_1.jpg);}
+@-o-keyframes animatedbackground {
+    0% {
+        background-image: url(../Media/Background_1.jpg);
+    }
+
+    30% {
+        background-image: url(../Media/Background_1.jpg);
+    }
+
+    48% {
+        background-image: url(../Media/Background_2.jpg);
+    }
+
+    50% {
+        background-image: url(../Media/Background_3.jpg);
+    }
+
+    62% {
+        background-image: url(../Media/Background_2.jpg);
+    }
+
+    70% {
+        background-image: url(../Media/Background_1.jpg);
+    }
+
+    100% {
+        background-image: url(../Media/Background_1.jpg);
+    }
 
 }
