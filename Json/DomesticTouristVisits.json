@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": 200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Data/DomesticTouristVisits.csv"
+  },
+  "background": {"expr": "null"},
+  "title": "World Happiness Report",
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "title": "Year",
+      "axis": {"tickCount": 10}
+    },
+    "y": {
+      "field": "Tourists",
+      "type": "quantitative",
+      "title": " Domestic tourist visits in India",
+      "axis": {"tickCount": 6}
+    },
+    "color": {}
+  },
+  "config": {}
+}
