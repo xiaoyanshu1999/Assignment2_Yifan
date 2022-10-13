@@ -16,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
 
+
 </head>
 
 <body>
@@ -40,21 +41,31 @@
 
 
         </div>
+
         <div class="float">
 
 
 
 
             <div id="visualizationembedded3"></div>
-            <div id="slider">
-                <div id="oldchildslider"></div>
-              </div>
 
 
+        </div>
+
+        <div class="float" style="margin-left:220px; color: white;background-blend-mode: multiply; filter: opacity(0.4); filter:hue-rotate(180deg); ">
+
+
+                <div id="slider" style="color: whitesmoke; cursor: no-drop; background-blend-mode: multiply;">
+                    <div id="oldchildslider"></div>
+                  </div>
+    
+             
 
         </div>
     </div>
 
+
+    <script src="test.js"></script>
 
     <script type="text/javascript">
         var spec =
@@ -63,6 +74,9 @@
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
+    </script>
+
+    <script type="text/javascript">
         var spec =
             "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/DomesticTouristVisits.json";
 
@@ -72,18 +86,10 @@
         }).catch(console.error);
 
 
-        var spec =
-            "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/DomesticTouristVisits.json";
-
-        vegaEmbed('#visualizationembedded3', spec).then(function(result) {
-             const sliders = document.getElementsByClassName('vega-bindings'); 
-             const newparent = document.getElementById('slider');  
-             const oldchild = document.getElementById("oldchildslider");  
-             newparent.replaceChild(sliders[0], oldchild);
-            }).catch(console.error);
 
     </script>
 
+    
 
 
 
