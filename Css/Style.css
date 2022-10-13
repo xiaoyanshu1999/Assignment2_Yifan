@@ -1,6 +1,8 @@
 body {
     margin: 0;
-    background-image: url(../Media/Background_1.jpg);
+    padding: 0;
+    overflow-x: hidden;
+
 }
 
 .container {
@@ -8,13 +10,7 @@ body {
     width: 100%;
     text-align: center;
 
-    padding: 50px;
-    padding-top: 10px;
-
 }
-
-
-
 
 
 #background {
@@ -22,11 +18,9 @@ body {
     width: 100%;
     background-image: url(../Media/Background_1.jpg);
     background-repeat: no-repeat;
-
+    background-attachment: fixed;
     background-position-x: center;
-
     background-position-y: center;
-
     background-size: 100% 100%;
     animation: animatedbackground 6s infinite;
     -moz-animation: animatedbackground 6s infinite;
@@ -158,5 +152,16 @@ body {
     100% {
         background-image: url(../Media/Background_1.jpg);
     }
+
+}
+
+
+.float {
+
+    margin: 0;
+    height: 100%;
+    width: 100%;
+
+
 
 }

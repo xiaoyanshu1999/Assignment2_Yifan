@@ -22,33 +22,45 @@
 
     <div class="container" id="background">
 
-        <div id="homework_map"></div>
+        <div class="float">
 
-                <script type="text/javascript">
-                    var spec =
-                        "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/visualization.vl.json";
-                    vegaEmbed('#homework_map', spec).then(function (result) {
-                        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                    }).catch(console.error);
-                </script>
+            <div id="visualizationembedded1"></div>
 
+
+
+        </div>
+        <div class="float">
 
 
 
 
-       
-       
-        <div id="homework_map"></div>
-                <script type="text/javascript">
-                    var spec =
-                        "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/DomesticTouristVisits.json";
-                    vegaEmbed('#homework_map', spec).then(function (result) {
-                        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                    }).catch(console.error);
-                </script>
+            <div id="visualizationembedded2"></div>
 
+
+
+
+        </div>
 
     </div>
+
+
+    <script type="text/javascript">
+        var spec =
+            "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/visualization.vl.json";
+        vegaEmbed('#visualizationembedded1', spec).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var spec =
+            "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/DomesticTouristVisits.json";
+
+        vegaEmbed('#visualizationembedded2', spec).then(function (result) {
+
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+    </script>
+
+
 
 
 
