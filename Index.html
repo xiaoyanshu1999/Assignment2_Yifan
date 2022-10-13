@@ -40,7 +40,19 @@
 
 
         </div>
+        <div class="float">
 
+
+
+
+            <div id="visualizationembedded3"></div>
+            <div id="slider">
+                <div id="oldchildslider"></div>
+              </div>
+
+
+
+        </div>
     </div>
 
 
@@ -58,6 +70,18 @@
 
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
+
+
+        var spec =
+            "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/DomesticTouristVisits.json";
+
+        vegaEmbed('#visualizationembedded3', spec).then(function(result) {
+             const sliders = document.getElementsByClassName('vega-bindings'); 
+             const newparent = document.getElementById('slider');  
+             const oldchild = document.getElementById("oldchildslider");  
+             newparent.replaceChild(sliders[0], oldchild);
+            }).catch(console.error);
+
     </script>
 
 
