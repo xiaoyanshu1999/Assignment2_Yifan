@@ -3,17 +3,19 @@
   "data": {
     "url": "https://raw.githubusercontent.com/xiaoyanshu1999/YifanWeek10Homework/main/DATA/HappinessPerformance.csv"
   },
-  "background": {"expr": "null"},
+  "background": {
+    "expr": "null"
+  },
   "title": "World Happiness Report",
-  "vconcat": [
-    {
-      "hconcat": [
-        {
+  "vconcat": [{
+      "hconcat": [{
           "width": 800,
           "height": 600,
-          "projection": {"type": "equalEarth", "rotate": [-75, 0, 0]},
-          "layer": [
-            {
+          "projection": {
+            "type": "equalEarth",
+            "rotate": [-75, 0, 0]
+          },
+          "layer": [{
               "data": {
                 "url": "https://raw.githubusercontent.com/xiaoyanshu1999/YifanWeek10Homework/main/JSON/ne_110m_admin_0_countries.json",
                 "format": {
@@ -30,9 +32,15 @@
             {
               "data": {
                 "url": "https://raw.githubusercontent.com/xiaoyanshu1999/YifanWeek10Homework/main/JSON/oceans.json",
-                "format": {"type": "topojson", "feature": "oceans"}
+                "format": {
+                  "type": "topojson",
+                  "feature": "oceans"
+                }
               },
-              "mark": {"type": "geoshape", "fill": "#b3d1e8"}
+              "mark": {
+                "type": "geoshape",
+                "fill": "#b3d1e8"
+              }
             },
             {
               "data": {
@@ -42,7 +50,11 @@
                   "feature": "ne_110m_graticules_30"
                 }
               },
-              "mark": {"type": "geoshape", "fill": null, "stroke": "#b6c3cc"}
+              "mark": {
+                "type": "geoshape",
+                "fill": null,
+                "stroke": "#b6c3cc"
+              }
             },
             {
               "data": {
@@ -52,8 +64,11 @@
                   "feature": "ne_110m_admin_0_countries"
                 }
               },
-              "transform": [
-                {"filter": {"param": "time_brush"}},
+              "transform": [{
+                  "filter": {
+                    "param": "time_brush"
+                  }
+                },
                 {
                   "lookup": "properties.NAME",
                   "from": {
@@ -69,23 +84,34 @@
                 "color": {
                   "field": "HappinessScore",
                   "type": "quantitative",
-                  "scale": {"type": "log", "scheme": "goldorange"}
+                  "scale": {
+                    "type": "log",
+                    "scheme": "goldorange"
+                  }
                 },
-                "tooltip": [
-                  {"field": "Date", "type": "nominal"},
+                "tooltip": [{
+                    "field": "Date",
+                    "type": "nominal"
+                  },
                   {
                     "field": "properties.NAME",
                     "type": "nominal",
                     "title": "Country"
                   },
-                  {"field": "HappinessScore", "type": "quantitative"}
+                  {
+                    "field": "HappinessScore",
+                    "type": "quantitative"
+                  }
                 ]
               },
-              "layer": [
-                {"mark": {"type": "geoshape", "opacity": 0.8}},
+              "layer": [{
+                  "mark": {
+                    "type": "geoshape",
+                    "opacity": 0.8
+                  }
+                },
                 {
-                  "transform": [
-                    {
+                  "transform": [{
                       "calculate": "'The happiness performace of India ranked; the selected year: ' + datum['ranking']",
                       "as": "text_annotation_raw"
                     },
@@ -94,8 +120,7 @@
                       "as": "text_annotation"
                     }
                   ],
-                  "layer": [
-                    {
+                  "layer": [{
                       "mark": {
                         "type": "point",
                         "size": 200,
@@ -119,36 +144,74 @@
                         "baseline": "middle",
                         "fontStyle": "italic"
                       },
-                      "encoding": {"text": {"field": "text_annotation"}}
+                      "encoding": {
+                        "text": {
+                          "field": "text_annotation"
+                        }
+                      }
                     }
                   ]
                 }
               ],
-              "resolve": {"scale": {"color": "independent"}}
+              "resolve": {
+                "scale": {
+                  "color": "independent"
+                }
+              }
             }
           ]
         },
         {
-          "vconcat": [
-            {
+          "vconcat": [{
               "width": 450,
               "height": 150,
               "data": {
-                "values": [
-                  {"Year": "2015", "Average": 8.46, "India": 6.45},
-                  {"Year": "2016", "Average": 9.54, "India": 7.4},
-                  {"Year": "2017", "Average": 9.85, "India": 7.92},
-                  {"Year": "2018", "Average": 8.91, "India": 7.21},
-                  {"Year": "2019", "Average": 9.05, "India": 7.55},
-                  {"Year": "2020", "Average": 9.3, "India": 8.85},
-                  {"Year": "2021", "Average": 9.43, "India": 8.76}
+                "values": [{
+                    "Year": "2015",
+                    "Average": 8.46,
+                    "India": 6.45
+                  },
+                  {
+                    "Year": "2016",
+                    "Average": 9.54,
+                    "India": 7.4
+                  },
+                  {
+                    "Year": "2017",
+                    "Average": 9.85,
+                    "India": 7.92
+                  },
+                  {
+                    "Year": "2018",
+                    "Average": 8.91,
+                    "India": 7.21
+                  },
+                  {
+                    "Year": "2019",
+                    "Average": 9.05,
+                    "India": 7.55
+                  },
+                  {
+                    "Year": "2020",
+                    "Average": 9.3,
+                    "India": 8.85
+                  },
+                  {
+                    "Year": "2021",
+                    "Average": 9.43,
+                    "India": 8.76
+                  }
                 ]
               },
               "encoding": {
                 "x": {
                   "field": "Year",
                   "timeUnit": "year",
-                  "scale": {"domain": {"param": "time_brush"}},
+                  "scale": {
+                    "domain": {
+                      "param": "time_brush"
+                    }
+                  },
                   "axis": {
                     "labelAlign": "left",
                     "title": "Economy Performance",
@@ -156,139 +219,255 @@
                   }
                 }
               },
-              "layer": [
-                {
-                  "mark": {"type": "bar", "opacity": 0.3, "color": "#e59937"},
+              "layer": [{
+                  "mark": {
+                    "type": "bar",
+                    "opacity": 0.3,
+                    "color": "#e59937"
+                  },
                   "encoding": {
                     "y": {
                       "field": "Average",
                       "type": "quantitative",
                       "title": "Average Performace",
-                      "scale": {"domain": [0, 11]},
-                      "axis": {"values": [0, 2, 4, 6, 8, 10, 12]}
+                      "scale": {
+                        "domain": [0, 11]
+                      },
+                      "axis": {
+                        "values": [0, 2, 4, 6, 8, 10, 12]
+                      }
                     }
                   }
                 },
                 {
-                  "mark": {"type": "line", "color": "#dc270f"},
+                  "mark": {
+                    "type": "line",
+                    "color": "#dc270f"
+                  },
                   "encoding": {
                     "y": {
                       "field": "India",
                       "type": "quantitative",
                       "title": "India Status",
-                      "scale": {"domain": [0, 11]},
-                      "axis": {"values": [0, 2, 4, 6, 8, 10, 12]}
+                      "scale": {
+                        "domain": [0, 11]
+                      },
+                      "axis": {
+                        "values": [0, 2, 4, 6, 8, 10, 12]
+                      }
                     }
                   }
                 }
               ],
-              "resolve": {"scale": {"y": "independent"}}
+              "resolve": {
+                "scale": {
+                  "y": "independent"
+                }
+              }
             },
             {
               "width": 450,
               "height": 150,
               "data": {
-                "values": [
-                  {"Year": "2015", "Average": 0.99, "India": 0.38},
-                  {"Year": "2016", "Average": 0.79, "India": 0.29},
-                  {"Year": "2017", "Average": 1.19, "India": 0.75},
-                  {"Year": "2018", "Average": 1.21, "India": 0.75},
-                  {"Year": "2019", "Average": 1.21, "India": 0.77},
-                  {"Year": "2020", "Average": 0.81, "India": 0.59},
-                  {"Year": "2021", "Average": 0.81, "India": 0.6}
+                "values": [{
+                    "Year": "2015",
+                    "Average": 0.99,
+                    "India": 0.38
+                  },
+                  {
+                    "Year": "2016",
+                    "Average": 0.79,
+                    "India": 0.29
+                  },
+                  {
+                    "Year": "2017",
+                    "Average": 1.19,
+                    "India": 0.75
+                  },
+                  {
+                    "Year": "2018",
+                    "Average": 1.21,
+                    "India": 0.75
+                  },
+                  {
+                    "Year": "2019",
+                    "Average": 1.21,
+                    "India": 0.77
+                  },
+                  {
+                    "Year": "2020",
+                    "Average": 0.81,
+                    "India": 0.59
+                  },
+                  {
+                    "Year": "2021",
+                    "Average": 0.81,
+                    "India": 0.6
+                  }
                 ]
               },
               "encoding": {
                 "x": {
                   "field": "Year",
                   "timeUnit": "year",
-                  "scale": {"domain": {"param": "time_brush"}},
+                  "scale": {
+                    "domain": {
+                      "param": "time_brush"
+                    }
+                  },
                   "axis": {
                     "title": "Social Support Performance",
                     "values": [2015, 2016, 2017, 2018, 2019, 2020, 2021]
                   }
                 }
               },
-              "layer": [
-                {
-                  "mark": {"type": "bar", "opacity": 0.3, "color": "#e59937"},
+              "layer": [{
+                  "mark": {
+                    "type": "bar",
+                    "opacity": 0.3,
+                    "color": "#e59937"
+                  },
                   "encoding": {
                     "y": {
                       "field": "Average",
                       "type": "quantitative",
                       "title": "Average Performace",
-                      "scale": {"domain": [0, 1.5]},
-                      "axis": {"values": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4]}
+                      "scale": {
+                        "domain": [0, 1.5]
+                      },
+                      "axis": {
+                        "values": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4]
+                      }
                     }
                   }
                 },
                 {
-                  "mark": {"type": "line", "color": "#dc270f"},
+                  "mark": {
+                    "type": "line",
+                    "color": "#dc270f"
+                  },
                   "encoding": {
                     "y": {
                       "field": "India",
                       "type": "quantitative",
                       "title": "India Status",
-                      "scale": {"domain": [0, 1.5]},
-                      "axis": {"values": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4]}
+                      "scale": {
+                        "domain": [0, 1.5]
+                      },
+                      "axis": {
+                        "values": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4]
+                      }
                     }
                   }
                 }
               ],
-              "resolve": {"scale": {"y": "independent"}}
+              "resolve": {
+                "scale": {
+                  "y": "independent"
+                }
+              }
             },
             {
               "width": 450,
               "height": 150,
               "data": {
-                "values": [
-                  {"Year": "2015", "Average": 0.63, "India": 0.52},
-                  {"Year": "2016", "Average": 0.56, "India": 0.45},
-                  {"Year": "2017", "Average": 0.55, "India": 0.46},
-                  {"Year": "2018", "Average": 0.6, "India": 0.49},
-                  {"Year": "2019", "Average": 0.73, "India": 0.59},
-                  {"Year": "2020", "Average": 0.64, "India": 0.6},
-                  {"Year": "2021", "Average": 0.65, "India": 0.61}
+                "values": [{
+                    "Year": "2015",
+                    "Average": 0.63,
+                    "India": 0.52
+                  },
+                  {
+                    "Year": "2016",
+                    "Average": 0.56,
+                    "India": 0.45
+                  },
+                  {
+                    "Year": "2017",
+                    "Average": 0.55,
+                    "India": 0.46
+                  },
+                  {
+                    "Year": "2018",
+                    "Average": 0.6,
+                    "India": 0.49
+                  },
+                  {
+                    "Year": "2019",
+                    "Average": 0.73,
+                    "India": 0.59
+                  },
+                  {
+                    "Year": "2020",
+                    "Average": 0.64,
+                    "India": 0.6
+                  },
+                  {
+                    "Year": "2021",
+                    "Average": 0.65,
+                    "India": 0.61
+                  }
                 ]
               },
               "encoding": {
                 "x": {
                   "field": "Year",
                   "timeUnit": "year",
-                  "scale": {"domain": {"param": "time_brush"}},
+                  "scale": {
+                    "domain": {
+                      "param": "time_brush"
+                    }
+                  },
                   "axis": {
                     "title": "Life Expectancy Performance",
                     "values": [2015, 2016, 2017, 2018, 2019, 2020, 2021]
                   }
                 }
               },
-              "layer": [
-                {
-                  "mark": {"type": "bar", "opacity": 0.3, "color": "#e59937"},
+              "layer": [{
+                  "mark": {
+                    "type": "bar",
+                    "opacity": 0.3,
+                    "color": "#e59937"
+                  },
                   "encoding": {
                     "y": {
                       "field": "Average",
                       "type": "quantitative",
                       "title": "Average Performace",
-                      "scale": {"domain": [0, 0.9]},
-                      "axis": {"values": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4]}
+                      "scale": {
+                        "domain": [0, 0.9]
+                      },
+                      "axis": {
+                        "values": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4]
+                      }
                     }
                   }
                 },
                 {
-                  "mark": {"type": "line", "color": "#dc270f"},
+                  "mark": {
+                    "type": "line",
+                    "color": "#dc270f"
+                  },
                   "encoding": {
                     "y": {
                       "field": "India",
                       "type": "quantitative",
                       "title": "India Status",
-                      "scale": {"domain": [0, 1.5]},
-                      "axis": {"values": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4]}
+                      "scale": {
+                        "domain": [0, 1.5]
+                      },
+                      "axis": {
+                        "values": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4]
+                      }
                     }
                   }
                 }
               ],
-              "resolve": {"scale": {"y": "independent"}}
+              "resolve": {
+                "scale": {
+                  "y": "independent"
+                }
+              }
             }
           ]
         }
@@ -297,35 +476,70 @@
     {
       "width": 1300,
       "height": 60,
-      "mark": {"type": "line", "color": "#fdbe85"},
+      "mark": {
+        "type": "line",
+        "color": "#fdbe85"
+      },
       "title": "Use this line chart to filter out the data based on time",
       "data": {
-        "values": [
-          {"Year": "2015", "Average": 8.46, "India": 6.45},
-          {"Year": "2016", "Average": 9.54, "India": 7.4},
-          {"Year": "2017", "Average": 9.85, "India": 7.92},
-          {"Year": "2018", "Average": 8.91, "India": 7.21},
-          {"Year": "2019", "Average": 9.05, "India": 7.55},
-          {"Year": "2020", "Average": 9.3, "India": 8.85},
-          {"Year": "2021", "Average": 9.43, "India": 8.76}
+        "values": [{
+            "Year": "2015",
+            "Average": 8.46,
+            "India": 6.45
+          },
+          {
+            "Year": "2016",
+            "Average": 9.54,
+            "India": 7.4
+          },
+          {
+            "Year": "2017",
+            "Average": 9.85,
+            "India": 7.92
+          },
+          {
+            "Year": "2018",
+            "Average": 8.91,
+            "India": 7.21
+          },
+          {
+            "Year": "2019",
+            "Average": 9.05,
+            "India": 7.55
+          },
+          {
+            "Year": "2020",
+            "Average": 9.3,
+            "India": 8.85
+          },
+          {
+            "Year": "2021",
+            "Average": 9.43,
+            "India": 8.76
+          }
         ]
       },
-      "params": [
-        {
-          "name": "time_brush",
-          "select": {"type": "interval", "encodings": ["x"]}
+      "params": [{
+        "name": "time_brush",
+        "select": {
+          "type": "interval",
+          "encodings": ["x"]
         }
-      ],
+      }],
       "encoding": {
         "x": {
           "field": "Year",
           "timeUnit": "year",
-          "axis": {"title": ""},
+          "axis": {
+            "title": ""
+          },
           "type": "ordinal"
         },
         "y": {
           "field": "Average",
-          "scale": {"domain": [0, 13]},
+          "scale": {
+            "domain": [0, 13]
+          },
           "axis": {
             "values": [0, 2, 4, 6, 8, 10, 12],
             "tickCount": 10,
@@ -337,5 +551,10 @@
       }
     }
   ],
-  "config": {"title": {"font": "sans-serif", "fontSize": 16}}
+  "config": {
+    "title": {
+      "font": "sans-serif",
+      "fontSize": 16
+    }
+  }
 }
