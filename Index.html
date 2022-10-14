@@ -15,7 +15,41 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
-
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            resizeDiv();
+        });
+    
+        var resizeDiv = function(){
+            var width = $(window).width();
+            var height = $(window).height();
+            var scaleX = width/2560; 
+            var scaleY = height/1440; 
+    
+          
+            var scaleFunc = "scale(scaleX,scaleY)";
+    
+            $('body').css({
+                "transform":scaleFunc, 
+                "transform-origin":"center top", 
+    
+                "-ms-transform":scaleFunc,     /* IE 9 */
+                "-ms-transform-origin":"center top",
+    
+                "-moz-transform":scaleFunc,     /* Firefox */
+                "-moz-transform-origin":"center top",
+    
+                "-webkit-transform":scaleFunc, /* Safari 和 Chrome */
+                "-webkit-transform-origin":"center top",
+    
+                "-o-transform":scaleFunc,     /* Opera */
+                "-o-transform-origin":"center top",
+            });
+    
+            $('body').show();
+        };
+    </script>
 
 </head>
 
@@ -23,76 +57,90 @@
 
     <div class="container" id="background">
 
+
         <div class="float">
 
-            <div id="visualizationembedded1"></div>
 
+            <div id="titleshape">
+                <canvas id="tutorial" width="1920" height="1080"></canvas>
+            </div>
 
 
         </div>
+
         <div class="float">
 
+            <div id="visualizationembedded3"></div>
 
+        </div>
+
+        <div class="float" >
+
+            <div id="visualizationembedded1"></div>
+
+        </div>
+
+        <div class="float">
 
 
             <div id="visualizationembedded2"></div>
 
 
-
-
         </div>
 
-        <div class="float">
-
-
-
-
-            <div id="visualizationembedded3"></div>
-
-
-        </div>
-
-        <div class="float" style="margin-left:220px; color: white;background-blend-mode: multiply; filter: opacity(0.4); filter:hue-rotate(180deg); ">
-
-
-                <div id="slider" style="color: whitesmoke; cursor: no-drop; background-blend-mode: multiply;">
-                    <div id="oldchildslider"></div>
-                  </div>
     
-             
+
+        <div class="float" style="filter:hue-rotate(180deg);">
+
+            <div id="slider">
+                <div id="oldchildslider"></div>
+            </div>
+
 
         </div>
     </div>
 
 
-    <script src="test.js"></script>
-
     <script type="text/javascript">
-        var spec =
+        var visualization1 =
             "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/visualization.vl.json";
-        vegaEmbed('#visualizationembedded1', spec).then(function (result) {
+        vegaEmbed('#visualizationembedded1', visualization1).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
     </script>
 
     <script type="text/javascript">
-        var spec =
+        var visualization2 =
             "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/DomesticTouristVisits.json";
 
-        vegaEmbed('#visualizationembedded2', spec).then(function (result) {
-
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        vegaEmbed('#visualizationembedded2', visualization2).then(function (result) {
+   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
-
-
-
+        
     </script>
 
+<script type="text/javascript" src="./Json/MajorMapping.js">
+    
+    
+</script>
     
 
-
-
+    <script type="text/javascript">
+        function draw() {
+            var canvas = document.getElementById('tutorial');
+            if (!canvas.getContext) return;
+            var ctx = canvas.getContext("2d");
+            //开始代码
+            ctx.fillStyle = "rgb(200,0,0)";
+            //绘制矩形
+            ctx.fillRect(10, 10, 55, 50);
+            ctx.strokeRect(10, 70, 100, 50);
+            ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+            ctx.fillRect(100, 1340, 55, 50);
+        }
+        draw();
+    </script>
 
 </body>
 

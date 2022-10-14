@@ -1,4 +1,4 @@
-const spec = {
+const visualization3 = {
     
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
         "title": "",
@@ -98,9 +98,9 @@ const spec = {
         "config": {}
 };
 
-vegaEmbed('#visualizationembedded3', spec).then(function(result) {
-    const sliders = document.getElementsByClassName('vega-bindings'); 
-    const newparent = document.getElementById('slider');  
-    const oldchild = document.getElementById("oldchildslider");  
-    newparent.replaceChild(sliders[0], oldchild);
-  }).catch(console.error);
+vegaEmbed('#visualizationembedded3', visualization3).then(function(result) {
+  const sliders = document.getElementsByClassName('vega-bindings'); 
+  const newparent = document.getElementById('slider');  
+  const oldchild = document.getElementById("oldchildslider");  
+  newparent.replaceChild(sliders[0], oldchild);
+   }).catch(console.error);
