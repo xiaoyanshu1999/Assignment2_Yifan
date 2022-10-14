@@ -15,45 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            resizeDiv();
-        });
-
-        var resizeDiv = function () {
-            var width = $(window).width();
-            var height = $(window).height();
-            var scaleX = width / 2560;
-            var scaleY = height / 1440;
-
-
-            var scaleFunc = "scale(scaleX,scaleY)";
-
-            $('body').css({
-                "transform": scaleFunc,
-                "transform-origin": "center top",
-
-                "-ms-transform": scaleFunc,
-                /* IE 9 */
-                "-ms-transform-origin": "center top",
-
-                "-moz-transform": scaleFunc,
-                /* Firefox */
-                "-moz-transform-origin": "center top",
-
-                "-webkit-transform": scaleFunc,
-                /* Safari 和 Chrome */
-                "-webkit-transform-origin": "center top",
-
-                "-o-transform": scaleFunc,
-                /* Opera */
-                "-o-transform-origin": "center top",
-            });
-
-            $('body').show();
-        };
-    </script>
+    
 
 </head>
 
@@ -62,11 +24,15 @@
     <div class="container" id="background">
 
 
-        <div class="float">
+        <div class="float" id="title">
 
 
             <div id="titleshape">
-                <canvas id="tutorial" width="1920" height="1080"></canvas>
+                <canvas id="shape" width="1920" height="1080"></canvas>
+            </div>
+    
+            <div id="titletext">
+                <canvas id="text" width="1920" height="1080"></canvas>
             </div>
 
 
@@ -130,20 +96,54 @@
 
     <script type="text/javascript">
         function draw() {
-            var canvas = document.getElementById('tutorial');
+            var canvas = document.getElementById('shape');
             if (!canvas.getContext) return;
             var ctx = canvas.getContext("2d");
-            //开始代码
-            ctx.fillStyle = "rgb(200,0,0)";
-            //绘制矩形
-            ctx.fillRect(10, 10, 55, 50);
-            ctx.strokeRect(10, 70, 100, 50);
-            ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-            ctx.fillRect(100, 1340, 55, 50);
+         
+            ctx.fillStyle = "rgb(107,63,50)";
+
+            ctx.fillRect(20, 50, 65, 50);
+
+
+            ctx.beginPath();
+             ctx.moveTo(40, 1080); //起始点
+             var cp1x =  60, cp1y = 980;  //控制点1
+              var cp2x = 100, cp2y = 1020;  //控制点2
+            var x = 200, y = 1080; // 结束点
+     
+                ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+               ctx.stroke();
+
+                 ctx.fill();
+
+
+            ctx.strokeStyle = "rgb(107,63,50)";
+            ctx.beginPath(); //新建一条path
+            ctx.moveTo(60, 50); //把画笔移动到指定的坐标
+            ctx.lineTo(60, 1080);  //绘制一条从当前位置到指定坐标(200, 50)的直线.
+            ctx.closePath();
+           ctx.stroke(); 
+
+
+
         }
         draw();
     </script>
 
+    <script type="text/javascript">
+    function draw() {
+        var canvas = document.getElementById('text');
+        if (!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+     
+          ctx.font = "100px sans-serif"
+          ctx.fillText("nihao", 40, 300);
+
+
+
+    }
+    draw();
+</script>
 </body>
 
 </html>

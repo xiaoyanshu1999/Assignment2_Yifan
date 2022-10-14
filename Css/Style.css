@@ -1,14 +1,11 @@
 body {
-    width: 2560px;
-    height: 1440px;
     margin: 0;
     overflow-x: hidden;
-    display: none;
 }
 
 .container {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     padding: 0px;
     overflow-x: hidden;
     text-align: center;
@@ -31,7 +28,7 @@ body {
     /* Firefox */
     -webkit-animation: animatedbackground 6s infinite;
     /* Safari and Chrome */
-    -o-animation: animatedbackgroundt 6s infinite;
+    -o-animation: animatedbackground 6s infinite;
     /* Opera */
 }
 
@@ -163,19 +160,151 @@ body {
 .float{
 
     margin: 0;
-    height: 100vh;
-    width: 100vw;
-
-
-}
-
-#titleshape{
-
     height: 100%;
     width: 100%;
 
 
+}
+
+
+#title{
+
+position: relative;
+
 
 
 }
 
+
+#titleshape{
+    top:0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    animation: animatedtitleshape 5s ;
+    -moz-animation: animatedtitleshape 5s ;
+    /* Firefox */
+    -webkit-animation: animatedtitleshape 5s ;
+    /* Safari and Chrome */
+    -o-animation: animatedtitleshape 5s ;
+    /* Opera */
+
+
+}
+
+@keyframes animatedtitleshape {
+    0% {
+       opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+@-moz-keyframes animatedtitleshape {
+    0% {
+       opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+@-webkit-keyframes animatedtitleshape {
+    0% {
+       opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+
+@-o-keyframes animatedtitleshape {
+    0% {
+       opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+#titletext{
+    top:0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation: animatedtitletext 3s ;
+    -moz-animation: animatedtitletext 3s ;
+    /* Firefox */
+    -webkit-animation: animatedtitletext 3s ;
+    /* Safari and Chrome */
+    -o-animation: animatedtitletext 3s ;
+    /* Opera */
+
+
+
+
+}
+
+@keyframes animatedtitletext {
+    0% {
+       top: -200px;
+       opacity: 0%;
+    }
+
+    100% {
+        top:0px;
+        opacity: 100%;
+    }
+
+}
+
+@-moz-keyframes animatedtitletext {
+    0% {
+        top: -200px;
+        opacity: 0%;
+     }
+ 
+     100% {
+         top:0px;
+         opacity: 100%;
+     }
+
+}
+
+@-webkit-keyframes animatedtitletext {
+    0% {
+        top: -200px;
+        opacity: 0%;
+     }
+ 
+     100% {
+         top:0px;
+         opacity: 100%;
+     }
+
+}
+
+
+@-o-keyframes animatedtitletext {
+    0% {
+        top: -200px;
+        opacity: 0%;
+     }
+ 
+     100% {
+         top:0px;
+         opacity: 100%;
+     }
+
+}
