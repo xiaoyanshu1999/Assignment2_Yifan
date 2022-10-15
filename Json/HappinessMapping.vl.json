@@ -96,26 +96,11 @@
   ],
   "config": {
 
-    "axis": {
-      "labelPadding": 2,
-      "labelFont": "Mukta",
-      "titleFont": "Mukta"
-    },
-    "legend": {
-      "labelFont": "Mukta",
-      "titleFont": "Mukta"
-    },
-    "header": {
-      "labelFont": "Mukta",
-      "titleFont": "Mukta"
-    },
-    "mark": {
-      "font": "Mukta"
-    },
-    "title": {
-      "font": "Mukta",
-      "subtitleFont": "Mukta"
-    }
+    "axis": {"labelFont": "URW Chancery", "titleFont": "URW Chancery", "titleFontSize":16, "labelFontSize":14,"labelPadding": 5, "titlePadding":9, "titleColor":"#282c30","labelColor":"#363d45" },
+    "legend": {"labelFont": "URW Chancery", "titleFont": "URW Chancery", "titleFontSize":16, "labelFontSize":14, "titleColor":"#282c30","labelColor":"#363d45" },
+    "header": {"labelFont": "URW Chancery", "titleFont": "URW Chancery", "titleFontSize":16, "labelFontSize":14, "titleColor":"#282c30","labelColor":"#363d45" },
+    "mark": {"font": "URW Chancery"},
+    "title": {"font": "URW Chancery", "subtitleFont": "URW Chancery"}	
 
 
   }

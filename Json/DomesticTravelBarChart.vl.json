@@ -1,0 +1,71 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1200,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Data/DomesticTouristVisits.csv"
+  },
+  "background": {"expr": "null"},
+  "resolve": {"scale": {"color": "independent"}},
+  "layer": [
+    {
+      "mark": "bar",
+      "transform": [{"filter": "isValid(datum.Tourists)"}],
+      "encoding": {
+        "x": {
+          "field": "Tourists",
+          "type": "quantitative",
+          "title": " Domestic tourist visits in India (in millions)",
+          "axis": {"tickCount": 8},
+          "stack": "zero"
+        },
+        "y": {"field": "Year"},
+        "color": {"value": "#634531"}
+      }
+    },
+    {
+      "mark": {"type": "text", "dx": -18, "dy": 1},
+      "encoding": {
+        "x": {"field": "Tourists", "type": "quantitative", "stack": "zero"},
+        "y": {"field": "Year", "type": "nominal"},
+        "color": {
+          "field": "site",
+          "type": "nominal",
+          "scale": {"range": ["white"]},
+          "legend": null
+        },
+        "text": {"field": "Tourists", "type": "quantitative", "format": ".1f"}
+      }
+    }
+  ],
+  "config": {
+    "axis": {
+      "labelFont": "URW Chancery",
+      "titleFont": "URW Chancery",
+      "titleFontSize": 16,
+      "labelFontSize": 14,
+      "labelPadding": 5,
+      "titlePadding": 9,
+      "titleColor": "#282c30",
+      "labelColor": "#363d45"
+    },
+    "legend": {
+      "labelFont": "URW Chancery",
+      "titleFont": "URW Chancery",
+      "titleFontSize": 16,
+      "labelFontSize": 14,
+      "titleColor": "#282c30",
+      "labelColor": "#363d45"
+    },
+    "header": {
+      "labelFont": "URW Chancery",
+      "titleFont": "URW Chancery",
+      "titleFontSize": 16,
+      "labelFontSize": 14,
+      "titleColor": "#282c30",
+      "labelColor": "#363d45"
+    },
+    "mark": {"font": "URW Chancery"},
+    "title": {"font": "URW Chancery", "subtitleFont": "URW Chancery"}
+  }
+}
