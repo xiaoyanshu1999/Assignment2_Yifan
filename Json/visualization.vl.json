@@ -552,9 +552,28 @@
     }
   ],
   "config": {
+
+    "axis": {
+      "labelPadding": 2,
+      "labelFont": "Mukta",
+      "titleFont": "Mukta"
+    },
+    "legend": {
+      "labelFont": "Mukta",
+      "titleFont": "Mukta"
+    },
+    "header": {
+      "labelFont": "Mukta",
+      "titleFont": "Mukta"
+    },
+    "mark": {
+      "font": "Mukta"
+    },
     "title": {
-      "font": "sans-serif",
-      "fontSize": 16
+      "font": "Mukta",
+      "subtitleFont": "Mukta"
     }
+
+
   }
 }

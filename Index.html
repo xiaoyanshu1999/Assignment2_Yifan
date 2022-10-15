@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/Style.css" />
     <title>Visualization Draft</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mukta:wght@500&display=swap"
+        rel="stylesheet">
 
     <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
-    
+
 
 </head>
 
@@ -30,7 +32,7 @@
             <div id="titleshape">
                 <canvas id="shape" width="1920" height="1080"></canvas>
             </div>
-    
+
             <div id="titletext">
                 <canvas id="text" width="1920" height="1080"></canvas>
             </div>
@@ -99,30 +101,33 @@
             var canvas = document.getElementById('shape');
             if (!canvas.getContext) return;
             var ctx = canvas.getContext("2d");
-         
+
             ctx.fillStyle = "rgb(107,63,50)";
 
             ctx.fillRect(20, 50, 65, 50);
 
 
             ctx.beginPath();
-             ctx.moveTo(40, 1080); //起始点
-             var cp1x =  60, cp1y = 980;  //控制点1
-              var cp2x = 100, cp2y = 1020;  //控制点2
-            var x = 200, y = 1080; // 结束点
-     
-                ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
-               ctx.stroke();
+            ctx.moveTo(40, 1080); //起始点
+            var cp1x = 60,
+                cp1y = 980; //控制点1
+            var cp2x = 100,
+                cp2y = 1020; //控制点2
+            var x = 200,
+                y = 1080; // 结束点
 
-                 ctx.fill();
+            ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+            ctx.stroke();
+
+            ctx.fill();
 
 
             ctx.strokeStyle = "rgb(107,63,50)";
             ctx.beginPath(); //新建一条path
             ctx.moveTo(60, 50); //把画笔移动到指定的坐标
-            ctx.lineTo(60, 1080);  //绘制一条从当前位置到指定坐标(200, 50)的直线.
+            ctx.lineTo(60, 1080); //绘制一条从当前位置到指定坐标(200, 50)的直线.
             ctx.closePath();
-           ctx.stroke(); 
+            ctx.stroke();
 
 
 
@@ -131,19 +136,18 @@
     </script>
 
     <script type="text/javascript">
-    function draw() {
-        var canvas = document.getElementById('text');
-        if (!canvas.getContext) return;
-        var ctx = canvas.getContext("2d");
-     
-          ctx.font = "100px sans-serif"
-          ctx.fillText("nihao", 40, 300);
+        function draw() {
+            var canvas = document.getElementById('text');
+            if (!canvas.getContext) return;
+            var ctx = canvas.getContext("2d");
+            ctx.font = "200px Constantia"
+            ctx.fillText("nihao", 40, 300);
 
 
 
-    }
-    draw();
-</script>
+        }
+        draw();
+    </script>
 </body>
 
 </html>

@@ -95,7 +95,31 @@ const visualization3 = {
             }
           }
         ],
-        "config": {}
+        "config": {
+
+          "axis": {
+            "labelPadding": 2,
+            "labelFont": "Mukta",
+            "titleFont": "Mukta"
+          },
+          "legend": {
+            "labelFont": "Mukta",
+            "titleFont": "Mukta"
+          },
+          "header": {
+            "labelFont": "Mukta",
+            "titleFont": "Mukta"
+          },
+          "mark": {
+            "font": "Mukta"
+          },
+          "title": {
+            "font": "Mukta",
+            "subtitleFont": "Mukta"
+          }
+      
+      
+        }
 };
 
 vegaEmbed('#visualizationembedded3', visualization3).then(function(result) {
