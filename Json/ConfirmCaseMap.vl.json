@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Median house price per suburb (2010-2020)",
+  "repeat": [
+    "Year2020Feb-Apr",
+    "Year2020-May-Jul",
+    "Year2020-Aug-Oct",
+    "Year2020-Nov-Year2021-Jan",
+    "Year2021Feb-Apr",
+    "Year2021-May-Jul"
+  ],
+  "columns": 2,
+  "spec": {
+    "projection": {"type": "equirectangular"},
+    "width": 600,
+    "height": 450,
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/ne_50m_India_states_provinces.json",
+          "format": {
+            "type": "topojson",
+            "feature": "ne_50m_India_states_provinces"
+          }
+        },
+        "transform": [
+          {
+            "calculate": "'Data is not available in ' + datum.properties.name",
+            "as": "note"
+          }
+        ],
+        "mark": {
+          "type": "geoshape",
+          "fill": "#ddd",
+          "stroke": "white",
+          "strokeWidth": 1
+        },
+        "encoding": {"tooltip": {"field": "note"}}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Data/CovidConfimedCases.csv"
+        },
+        "transform": [
+          {
+            "lookup": "State",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/ne_50m_India_states_provinces.json",
+                "format": {
+                  "type": "topojson",
+                  "feature": "ne_50m_India_states_provinces"
+                }
+              },
+              "key": "properties.name"
+            },
+            "as": "geo"
+          }
+        ],
+        "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+        "encoding": {
+          "shape": {"field": "geo", "type": "geojson"},
+          "color": {
+            "field": {"repeat": "repeat"},
+            "type": "quantitative",
+            "scale": {"domain": [1000, 250000000], "scheme": "category10"},
+            "legend": {"format": ".2s", "title": "Median price"}
+          },
+          "tooltip": [
+            {"field": "State", "type": "nominal", "title": "State"},
+            {
+              "field": {"repeat": "repeat"},
+              "type": "quantitative",
+              "title": "Median Price",
+              "format": ","
+            }
+          ]
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {
+              "2010": "Year: 2010",
+              "2012": "Year: 2012",
+              "2014": "Year: 2014",
+              "2016": "Year: 2016",
+              "2018": "Year: 2018",
+              "2020": "Year: 2020"
+            }
+          ]
+        },
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "bottom",
+          "x": "width",
+          "y": 0
+        },
+        "encoding": {"text": {"field": {"repeat": "repeat"}}}
+      }
+    ]
+  },
+  "config": {}
+}
