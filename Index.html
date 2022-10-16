@@ -30,21 +30,36 @@
 
 
             <div id="titleshape">
-                <canvas id="shape" width="1920" height="1080"></canvas>
+                <canvas id="shape" style="width:100%; height: 100%;" width="1920" height="1080"></canvas>
             </div>
 
             <div id="titletext">
-                <canvas id="text" width="1920" height="1080"></canvas>
+                <canvas id="text" style="width:100%; height: 100%;" width="2560" height="1440"></canvas>
             </div>
 
 
         </div>
 
+
         <div class="float">
+            <div class="content">
+                <p>
+
+                    nihaonihaonihao
+
+                </p>
+
+
+
+
+            </div>
+
+
 
             <div id="visualizationembedded3"></div>
 
         </div>
+
 
         <div class="float">
 
@@ -62,9 +77,9 @@
 
 
 
-        <div class="float" style="filter:hue-rotate(180deg);">
+        <div class="float">
 
-            <div id="slider">
+            <div id="slider" style="filter:hue-rotate(172deg);">
                 <div id="oldchildslider"></div>
             </div>
 
@@ -95,7 +110,6 @@
 
     </script>
 
-
     <script type="text/javascript">
         function draw() {
             var canvas = document.getElementById('shape');
@@ -103,29 +117,26 @@
             var ctx = canvas.getContext("2d");
 
             ctx.fillStyle = "rgb(107,63,50)";
-
-            ctx.fillRect(20, 50, 65, 50);
-
+            ctx.strokeRect(110, 110, 165, 50);
+            ctx.fillRect(120, 120, 165, 50);
 
             ctx.beginPath();
-            ctx.moveTo(40, 1080); //起始点
-            var cp1x = 60,
-                cp1y = 980; //控制点1
-            var cp2x = 100,
-                cp2y = 1020; //控制点2
-            var x = 200,
-                y = 1080; // 结束点
+            ctx.moveTo(120, 1080);
+            var cp1x = 190,
+                cp1y = 980;
+            var cp2x = 390,
+                cp2y = 1020;
+            var x = 400,
+                y = 1080;
 
             ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
             ctx.stroke();
-
             ctx.fill();
 
-
             ctx.strokeStyle = "rgb(107,63,50)";
-            ctx.beginPath(); //新建一条path
-            ctx.moveTo(60, 50); //把画笔移动到指定的坐标
-            ctx.lineTo(60, 1080); //绘制一条从当前位置到指定坐标(200, 50)的直线.
+            ctx.beginPath();
+            ctx.moveTo(140, 120);
+            ctx.lineTo(140, 1080);
             ctx.closePath();
             ctx.stroke();
 
@@ -140,14 +151,16 @@
             var canvas = document.getElementById('text');
             if (!canvas.getContext) return;
             var ctx = canvas.getContext("2d");
-            ctx.font = "200px Constantia"
-            ctx.fillText("nihao", 40, 300);
 
-
-
+            ctx.fillStyle = "rgb(107,63,50)";
+            ctx.font = "125px Constantia"
+            ctx.fillText("Data Visualisation II", 1318, 700);
+            ctx.font = "55px Constantia"
+            ctx.fillText("Yifan Sun", 2168, 800);
         }
         draw();
     </script>
+
 </body>
 
 </html>

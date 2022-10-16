@@ -1,6 +1,7 @@
 body {
     margin: 0;
     overflow-x: hidden;
+
 }
 
 .container {
@@ -9,7 +10,7 @@ body {
     padding: 0px;
     overflow-x: hidden;
     text-align: center;
-    
+
 
 }
 
@@ -158,7 +159,7 @@ body {
 
 
 .float{
-
+    position: relative;
     margin: 0;
     height: 100%;
     width: 100%;
@@ -169,14 +170,15 @@ body {
 
 #title{
 
-position: relative;
-
+    height: 100%;
+    width: 100%;
 
 
 }
 
 
 #titleshape{
+
     top:0;
     position: absolute;
     height: 100%;
@@ -239,6 +241,7 @@ position: relative;
 }
 
 #titletext{
+
     top:0;
     position: absolute;
     height: 100%;
@@ -250,9 +253,6 @@ position: relative;
     /* Safari and Chrome */
     -o-animation: animatedtitletext 3s ;
     /* Opera */
-
-
-
 
 }
 
@@ -308,3 +308,4 @@ position: relative;
      }
 
 }
+

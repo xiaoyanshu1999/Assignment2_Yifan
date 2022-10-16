@@ -1,5 +1,4 @@
 const visualization3 = {
-
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "",
   "background": {
@@ -10,12 +9,14 @@ const visualization3 = {
   "params": [{
     "name": "Year_selection",
     "value": 2021,
+
     "bind": {
       "input": "range",
       "min": 2015,
       "max": 2021,
       "step": 1,
-      "name": "Year: "
+      "name": "Year:"
+
     }
   }],
   "projection": {
@@ -99,7 +100,10 @@ const visualization3 = {
             "domain": [0, 9]
           },
           "legend": {
-            "format": ".2s"
+            "format": ".2s",
+            "padding": 20,
+            "offset": 60,
+            "gradientLength": 400
           }
         },
         "tooltip": [{
@@ -129,14 +133,40 @@ const visualization3 = {
     }
   ],
   "config": {
-
-    "axis": {"labelFont": "URW Chancery", "titleFont": "URW Chancery", "titleFontSize":16, "labelFontSize":14,"labelPadding": 5, "titlePadding":9, "titleColor":"#282c30","labelColor":"#363d45" },
-    "legend": {"labelFont": "URW Chancery", "titleFont": "URW Chancery", "titleFontSize":16, "labelFontSize":14, "titleColor":"#282c30","labelColor":"#363d45" },
-    "header": {"labelFont": "URW Chancery", "titleFont": "URW Chancery", "titleFontSize":16, "labelFontSize":14, "titleColor":"#282c30","labelColor":"#363d45" },
-    "mark": {"font": "URW Chancery"},
-    "title": {"font": "URW Chancery", "subtitleFont": "URW Chancery"}	
-
-
+    "axis": {
+      "labelFont": "URW Chancery",
+      "titleFont": "URW Chancery",
+      "titleFontSize": 16,
+      "labelFontSize": 14,
+      "labelPadding": 1,
+      "titlePadding": 9,
+      "titleColor": "#282c30",
+      "labelColor": "#363d45"
+    },
+    "legend": {
+      "labelFont": "URW Chancery",
+      "titleFont": "URW Chancery",
+      "titleFontSize": 16,
+      "labelFontSize": 14,
+      "titlePadding": 20,
+      "titleColor": "#282c30",
+      "labelColor": "#363d45"
+    },
+    "header": {
+      "labelFont": "URW Chancery",
+      "titleFont": "URW Chancery",
+      "titleFontSize": 16,
+      "labelFontSize": 14,
+      "titleColor": "#282c30",
+      "labelColor": "#363d45"
+    },
+    "mark": {
+      "font": "URW Chancery"
+    },
+    "title": {
+      "font": "URW Chancery",
+      "subtitleFont": "URW Chancery"
+    }
   }
 };
 
