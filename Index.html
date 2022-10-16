@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mukta:wght@500&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mukta:wght@500&family=Yeon+Sung&display=swap"
         rel="stylesheet">
 
 
@@ -37,23 +37,30 @@
                 <canvas id="text" style="width:100%; height: 100%;" width="2560" height="1440"></canvas>
             </div>
 
+            
 
         </div>
 
 
         <div class="float">
-            <div class="content">
+            <div class=" leftcontent">
+                <h1>
+
+                    World happiness report
+
+
+                </h1>
+
+                <canvas id="label" width="459" height="30"></canvas>
                 <p>
 
                     nihaonihaonihao
 
                 </p>
-
-
-
-
+                <div id="slider" style="filter:hue-rotate(172deg);">
+                    <div id="oldchildslider"></div>
+                </div>
             </div>
-
 
 
             <div id="visualizationembedded3"></div>
@@ -79,9 +86,7 @@
 
         <div class="float">
 
-            <div id="slider" style="filter:hue-rotate(172deg);">
-                <div id="oldchildslider"></div>
-            </div>
+         
 
 
         </div>
@@ -140,8 +145,6 @@
             ctx.closePath();
             ctx.stroke();
 
-
-
         }
         draw();
     </script>
@@ -157,6 +160,23 @@
             ctx.fillText("Data Visualisation II", 1318, 700);
             ctx.font = "55px Constantia"
             ctx.fillText("Yifan Sun", 2168, 800);
+        }
+        draw();
+    </script>
+
+    <script type="text/javascript">
+        function draw() {
+            var canvas = document.getElementById('label');
+            if (!canvas.getContext) return;
+            var ctx = canvas.getContext("2d");
+            ctx.strokeStyle = "rgb(107,63,50)";
+            ctx.beginPath(); //新建一条path
+            ctx.moveTo(459, 8); //把画笔移动到指定的坐标
+            ctx.lineTo(0, 22); //绘制一条从当前位置到指定坐标(200, 50)的直线.
+            //闭合路径。会拉一条从当前点到path起始点的直线。如果当前点与起始点重合，则什么都不做
+            ctx.lineWidth = 5;
+            ctx.closePath();
+            ctx.stroke(); //绘制路径。
         }
         draw();
     </script>

@@ -1,6 +1,7 @@
 body {
     margin: 0;
     overflow-x: hidden;
+    user-select: none;
 
 }
 
@@ -10,8 +11,6 @@ body {
     padding: 0px;
     overflow-x: hidden;
     text-align: center;
-
-
 }
 
 
@@ -309,3 +308,23 @@ body {
 
 }
 
+.leftcontent{
+float: left;
+padding-left: 20px;
+
+
+}
+
+.leftcontent h1{
+    font-family: 'Yeon Sung', cursive;
+    font-weight: bold;
+
+
+}
+
+.leftcontent p{
+
+    font-family: 'Mukta', sans-serif;
+
+
+}
