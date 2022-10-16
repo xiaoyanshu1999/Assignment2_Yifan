@@ -1,0 +1,199 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Data/WorldHappinessDetail.csv"
+  },
+  "background": {"expr": "null"},
+  "resolve": {"scale": {"color": "independent"}},
+  "hconcat": [
+    {
+      "width": 300,
+      "height": 150,
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "nominal",
+          "axis": {
+            "labelAngle": 0,
+            "labelBaseline": "line-top",
+            "title": "Economy Performance"
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {"type": "bar", "opacity": 0.3, "color": "#e59937"},
+          "encoding": {
+            "y": {
+              "aggregate": "average",
+              "field": "Economy",
+              "title": "Average Performace",
+              "scale": {"domain": [0, 11]},
+              "axis": {"values": [0, 2, 4, 6, 8, 10, 12]}
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {"Date": "2015", "India": 6.45},
+              {"Date": "2016", "India": 7.4},
+              {"Date": "2017", "India": 7.92},
+              {"Date": "2018", "India": 7.21},
+              {"Date": "2019", "India": 7.55},
+              {"Date": "2020", "India": 8.85},
+              {"Date": "2021", "India": 8.76}
+            ]
+          },
+          "mark": {"type": "line", "color": "#dc270f"},
+          "encoding": {
+            "y": {
+              "field": "India",
+              "type": "quantitative",
+              "title": "India Status",
+              "scale": {"domain": [0, 11]},
+              "axis": {"values": [0, 2, 4, 6, 8, 10, 12]}
+            }
+          }
+        }
+      ],
+      "resolve": {"scale": {"y": "independent"}}
+    },
+    {
+      "width": 300,
+      "height": 150,
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "nominal",
+          "axis": {
+            "labelAngle": 0,
+            "labelBaseline": "line-top",
+            "title": "Social Support Performance"
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {"type": "bar", "opacity": 0.3, "color": "#e59937"},
+          "encoding": {
+            "y": {
+              "aggregate": "average",
+              "field": "SocialSupport",
+              "title": "Average Performace",
+              "scale": {"domain": [0, 1.5]},
+              "axis": {"values": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4]}
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {"Date": "2015", "India": 0.38},
+              {"Date": "2016", "India": 0.29},
+              {"Date": "2017", "India": 0.75},
+              {"Date": "2018", "India": 0.75},
+              {"Date": "2019", "India": 0.77},
+              {"Date": "2020", "India": 0.59},
+              {"Date": "2021", "India": 0.6}
+            ]
+          },
+          "mark": {"type": "line", "color": "#dc270f"},
+          "encoding": {
+            "y": {
+              "field": "India",
+              "type": "quantitative",
+              "title": "India Status",
+              "scale": {"domain": [0, 1.5]},
+              "axis": {"values": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4]}
+            }
+          }
+        }
+      ],
+      "resolve": {"scale": {"y": "independent"}}
+    },
+    {
+      "width": 300,
+      "height": 150,
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "nominal",
+          "axis": {
+            "labelAngle": 0,
+            "labelBaseline": "line-top",
+            "title": "Life Expectancy Performance"
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {"type": "bar", "opacity": 0.3, "color": "#e59937"},
+          "encoding": {
+            "y": {
+              "aggregate": "average",
+              "field": "LifeExpectancy",
+              "title": "Average Performace",
+              "scale": {"domain": [0, 0.9]},
+              "axis": {"values": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4]}
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {"Date": "2015", "India": 0.52},
+              {"Date": "2016", "India": 0.45},
+              {"Date": "2017", "India": 0.46},
+              {"Date": "2018", "India": 0.49},
+              {"Date": "2019", "India": 0.59},
+              {"Date": "2020", "India": 0.6},
+              {"Date": "2021", "India": 0.61}
+            ]
+          },
+          "mark": {"type": "line", "color": "#dc270f"},
+          "encoding": {
+            "y": {
+              "field": "India",
+              "type": "quantitative",
+              "title": "India Status",
+              "scale": {"domain": [0, 1.5]},
+              "axis": {"values": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4]}
+            }
+          }
+        }
+      ],
+      "resolve": {"scale": {"y": "independent"}}
+    }
+  ],
+  "config": {
+    "axis": {
+      "labelFont": "URW Chancery",
+      "titleFont": "URW Chancery",
+      "titleFontSize": 16,
+      "labelFontSize": 14,
+      "labelPadding": 5,
+      "titlePadding": 9,
+      "titleColor": "#282c30",
+      "labelColor": "#363d45"
+    },
+    "legend": {
+      "labelFont": "URW Chancery",
+      "titleFont": "URW Chancery",
+      "titleFontSize": 16,
+      "labelFontSize": 14,
+      "titleColor": "#282c30",
+      "labelColor": "#363d45"
+    },
+    "header": {
+      "labelFont": "URW Chancery",
+      "titleFont": "URW Chancery",
+      "titleFontSize": 16,
+      "labelFontSize": 14,
+      "titleColor": "#282c30",
+      "labelColor": "#363d45"
+    },
+    "mark": {"font": "URW Chancery"},
+    "title": {"font": "URW Chancery", "subtitleFont": "URW Chancery"}
+  }
+}
