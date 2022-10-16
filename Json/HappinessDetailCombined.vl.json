@@ -29,7 +29,7 @@
           "mark": {
             "type": "bar",
             "opacity": 0.3,
-            "color": "#d1cfcd"
+            "color": "#756d66"
           },
           
           "encoding": {
@@ -124,7 +124,7 @@
           "mark": {
             "type": "bar",
             "opacity": 0.3,
-            "color": "#d1cfcd"
+            "color": "#756d66"
           },
           "encoding": {
             "y": {
@@ -217,7 +217,7 @@
           "mark": {
             "type": "bar",
             "opacity": 0.3,
-            "color": "#d1cfcd"
+            "color": "#756d66"
           },
           "encoding": {
             "y": {
