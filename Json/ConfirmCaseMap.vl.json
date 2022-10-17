@@ -11,8 +11,8 @@
     "projection": {
       "type": "equirectangular"
     },
-    "width": 400,
-    "height": 450,
+    "width": 220,
+    "height": 220,
     "layer": [{
         "data": {
           "url": "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/ne_50m_India_states_provinces.json",
