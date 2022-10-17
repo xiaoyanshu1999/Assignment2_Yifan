@@ -81,7 +81,13 @@
 
 
         </div>
+        <div class="float">
 
+
+            <div id="visualizationembedded5"></div>
+
+
+        </div>
 
    
 
@@ -121,6 +127,15 @@
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
     </script>
+
+<script type="text/javascript">
+    var visualization5 =
+        "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/SupermartGrocerySalesBubble.vl.json";
+
+    vegaEmbed('#visualizationembedded5', visualization5).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+</script>
 
     <script type="text/javascript" src="./Json/MajorMapping.js">
 
