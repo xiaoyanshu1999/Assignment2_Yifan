@@ -1,21 +1,19 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Median house price per suburb (2010-2020)",
-  "repeat": [
-    "Year2020Feb-Apr",
-    "Year2020-May-Jul",
-    "Year2020-Aug-Oct",
-    "Year2020-Nov-Year2021-Jan",
-    "Year2021Feb-Apr",
-    "Year2021-May-Jul"
-  ],
+  "repeat": ["Year2020Feb-Apr", "Year2020-May-Jul", "Year2020-Aug-Oct", "Year2020-Nov-Year2021-Jan", "Year2021Feb-Apr", "Year2021-May-Jul"],
+  "title": "",
+  "background": {
+    "expr": "null"
+  },
   "columns": 2,
+
   "spec": {
-    "projection": {"type": "equirectangular"},
-    "width": 600,
+    "projection": {
+      "type": "equirectangular"
+    },
+    "width": 400,
     "height": 450,
-    "layer": [
-      {
+    "layer": [{
         "data": {
           "url": "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/ne_50m_India_states_provinces.json",
           "format": {
@@ -23,26 +21,28 @@
             "feature": "ne_50m_India_states_provinces"
           }
         },
-        "transform": [
-          {
-            "calculate": "'Data is not available in ' + datum.properties.name",
-            "as": "note"
-          }
-        ],
+        "transform": [{
+          "calculate": "'Data is not available in ' + datum.properties.name",
+          "as": "note"
+        }],
         "mark": {
           "type": "geoshape",
-          "fill": "#ddd",
-          "stroke": "white",
-          "strokeWidth": 1
+          "fill": "#3b3b44c5",
+          "stroke": "#78787a",
+          "strokeWidth": 1,
+          "opacity": 0.92
         },
-        "encoding": {"tooltip": {"field": "note"}}
+        "encoding": {
+          "tooltip": {
+            "field": "note"
+          }
+        }
       },
       {
         "data": {
           "url": "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Data/CovidConfimedCases.csv"
         },
-        "transform": [
-          {
+        "transform": [{
             "lookup": "State",
             "from": {
               "data": {
@@ -56,50 +56,122 @@
             },
             "as": "geo"
           }
+
         ],
-        "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+        "mark": {
+          "type": "geoshape",
+          "stroke": "#fff",
+          "strokeWidth": 0.5
+        },
+
         "encoding": {
-          "shape": {"field": "geo", "type": "geojson"},
-          "color": {
-            "field": {"repeat": "repeat"},
-            "type": "quantitative",
-            "scale": {"domain": [1000, 250000000], "scheme": "category10"},
-            "legend": {"format": ".2s", "title": "Median price"}
+          "shape": {
+            "field": "geo",
+            "type": "geojson"
           },
-          "tooltip": [
-            {"field": "State", "type": "nominal", "title": "State"},
+          "color": {
+            "field": {
+              "repeat": "repeat"
+            },
+            "type": "quantitative",
+            "scale": {
+              "domain": [0, 460000000],
+              "scheme": "goldred"
+            },
+
+            "legend": {
+              "format": "~s",
+              "title": "Median price",
+              "padding": 20,
+              "offset": 60,
+              "gradientLength": 400
+            }
+          },
+
+
+          "tooltip": [{
+              "field": "State",
+              "type": "nominal",
+              "title": "State"
+            },
             {
-              "field": {"repeat": "repeat"},
+              "field": {
+                "repeat": "repeat"
+              },
               "type": "quantitative",
               "title": "Median Price",
               "format": ","
             }
+
           ]
         }
       },
       {
         "data": {
-          "values": [
-            {
-              "2010": "Year: 2010",
-              "2012": "Year: 2012",
-              "2014": "Year: 2014",
-              "2016": "Year: 2016",
-              "2018": "Year: 2018",
-              "2020": "Year: 2020"
-            }
-          ]
+          "values": [{
+            "Year2020Feb-Apr": "February - April in 2020",
+            "Year2020-May-Jul": "May - July in 2020",
+            "Year2020-Aug-Oct": "August - October in 2020",
+            "Year2020-Nov-Year2021-Jan": "November in 2020 - January in 2021",
+            "Year2021Feb-Apr": "February - April in 2021",
+            "Year2021-May-Jul": "May - July in 2022"
+
+          }]
         },
         "mark": {
           "type": "text",
           "align": "right",
           "baseline": "bottom",
           "x": "width",
-          "y": 0
+          "y": -10,
+          "font": "URW Chancery",
+          "fontSize": 16
         },
-        "encoding": {"text": {"field": {"repeat": "repeat"}}}
+        "encoding": {
+          "text": {
+            "field": {
+              "repeat": "repeat"
+            }
+          }
+        }
       }
     ]
   },
-  "config": {}
+  "config": {
+    "axis": {
+      "labelFont": "URW Chancery",
+      "titleFont": "URW Chancery",
+      "titleFontSize": 16,
+      "labelFontSize": 14,
+      "labelPadding": 1,
+      "titlePadding": 9,
+      "titleColor": "#282c30",
+      "labelColor": "#363d45"
+    },
+    "legend": {
+      "labelFont": "URW Chancery",
+      "titleFont": "URW Chancery",
+      "titleFontSize": 16,
+      "labelFontSize": 14,
+      "titlePadding": 20,
+      "titleColor": "#282c30",
+      "labelColor": "#363d45"
+    },
+    "header": {
+      "labelFont": "URW Chancery",
+      "titleFont": "URW Chancery",
+      "titleFontSize": 16,
+      "labelFontSize": 14,
+      "titleColor": "#282c30",
+      "labelColor": "#363d45"
+    },
+    "mark": {
+      "font": "URW Chancery"
+    },
+    "title": {
+      "font": "URW Chancery",
+      "subtitleFont": "URW Chancery"
+    }
+
+  }
 }
