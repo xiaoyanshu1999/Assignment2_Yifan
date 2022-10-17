@@ -75,8 +75,8 @@
             },
             "type": "quantitative",
             "scale": {
-              "domain": [0, 460000000],
-              "scheme": "goldred"
+              "domain": [0, 230000000],
+              "scheme": "yelloworangebrown"
             },
 
             "legend": {
