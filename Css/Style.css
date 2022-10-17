@@ -19,7 +19,7 @@ body {
     width: 100%;
     background-image: url(../Media/Background_1.jpg);
     background-repeat: no-repeat;
-    background-attachment:fixed;
+    background-attachment: fixed;
     background-position-x: center;
     background-position-y: center;
     background-size: 100% 100%;
@@ -157,7 +157,7 @@ body {
 }
 
 
-.float{
+.float {
     position: relative;
     margin: 0;
     height: 100%;
@@ -166,8 +166,26 @@ body {
 
 }
 
+.float p {
+    padding-left: 120PX;
+    padding-right: 120PX;
+    padding-bottom: 40px;
+    font-family: 'Mukta', sans-serif;
 
-#title{
+
+}
+
+#center {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    width: 100%;
+    height: auto;
+
+
+
+}
+
+#title {
 
     height: 100%;
     width: 100%;
@@ -176,19 +194,19 @@ body {
 }
 
 
-#titleshape{
+#titleshape {
 
-    top:0;
+    top: 0;
     position: absolute;
     height: 100%;
     width: 100%;
 
-    animation: animatedtitleshape 5s ;
-    -moz-animation: animatedtitleshape 5s ;
+    animation: animatedtitleshape 5s;
+    -moz-animation: animatedtitleshape 5s;
     /* Firefox */
-    -webkit-animation: animatedtitleshape 5s ;
+    -webkit-animation: animatedtitleshape 5s;
     /* Safari and Chrome */
-    -o-animation: animatedtitleshape 5s ;
+    -o-animation: animatedtitleshape 5s;
     /* Opera */
 
 
@@ -196,7 +214,7 @@ body {
 
 @keyframes animatedtitleshape {
     0% {
-       opacity: 0%;
+        opacity: 0%;
     }
 
     100% {
@@ -207,7 +225,7 @@ body {
 
 @-moz-keyframes animatedtitleshape {
     0% {
-       opacity: 0%;
+        opacity: 0%;
     }
 
     100% {
@@ -218,7 +236,7 @@ body {
 
 @-webkit-keyframes animatedtitleshape {
     0% {
-       opacity: 0%;
+        opacity: 0%;
     }
 
     100% {
@@ -230,7 +248,7 @@ body {
 
 @-o-keyframes animatedtitleshape {
     0% {
-       opacity: 0%;
+        opacity: 0%;
     }
 
     100% {
@@ -239,30 +257,30 @@ body {
 
 }
 
-#titletext{
+#titletext {
 
-    top:0;
+    top: 0;
     position: absolute;
     height: 100%;
     width: 100%;
-    animation: animatedtitletext 3s ;
-    -moz-animation: animatedtitletext 3s ;
+    animation: animatedtitletext 3s;
+    -moz-animation: animatedtitletext 3s;
     /* Firefox */
-    -webkit-animation: animatedtitletext 3s ;
+    -webkit-animation: animatedtitletext 3s;
     /* Safari and Chrome */
-    -o-animation: animatedtitletext 3s ;
+    -o-animation: animatedtitletext 3s;
     /* Opera */
 
 }
 
 @keyframes animatedtitletext {
     0% {
-       top: -200px;
-       opacity: 0%;
+        top: -200px;
+        opacity: 0%;
     }
 
     100% {
-        top:0px;
+        top: 0px;
         opacity: 100%;
     }
 
@@ -272,12 +290,12 @@ body {
     0% {
         top: -200px;
         opacity: 0%;
-     }
- 
-     100% {
-         top:0px;
-         opacity: 100%;
-     }
+    }
+
+    100% {
+        top: 0px;
+        opacity: 100%;
+    }
 
 }
 
@@ -285,12 +303,12 @@ body {
     0% {
         top: -200px;
         opacity: 0%;
-     }
- 
-     100% {
-         top:0px;
-         opacity: 100%;
-     }
+    }
+
+    100% {
+        top: 0px;
+        opacity: 100%;
+    }
 
 }
 
@@ -299,32 +317,35 @@ body {
     0% {
         top: -200px;
         opacity: 0%;
-     }
- 
-     100% {
-         top:0px;
-         opacity: 100%;
-     }
+    }
+
+    100% {
+        top: 0px;
+        opacity: 100%;
+    }
 
 }
 
-.leftcontent{
-float: left;
-padding-left: 20px;
+.leftcontent {
+    float: left;
+    padding-left: 150px;
 
 
 }
 
-.leftcontent h1{
+.leftcontent h1 {
     font-family: 'Yeon Sung', cursive;
     font-weight: bold;
-
+    width: 20%;
+    height: auto;
 
 }
 
-.leftcontent p{
+.leftcontent p {
 
     font-family: 'Mukta', sans-serif;
 
+    width: 20%;
+    height: auto;
 
 }
