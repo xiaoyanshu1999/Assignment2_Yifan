@@ -51,7 +51,7 @@
 
                 </h1>
 
-                <canvas id="label" width="459" height="30"></canvas>
+                <canvas id="label1" width="459" height="30"></canvas>
                 <p>
 
                     nihaonihaonihao
@@ -61,31 +61,55 @@
                     </div>
             </div>
 
-
             <div id="visualizationembedded3"></div>
             <div id="visualizationembedded1"></div>
         </div>
 
-        <div class="float">
-
-
-            <div id="visualizationembedded2"></div>
-
-
-        </div>
 
         <div class="float">
+            <div class=" leftcontent">
+                <h1>
 
+                    World happiness report
+
+
+                </h1>
+
+                <canvas id="label2" width="459" height="30"></canvas>
+                <p>
+
+                    nihaonihaonihao
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div id="slider" style="filter:hue-rotate(172deg);">
+                        <div id="oldchildslider"></div>
+                    </div>
+            </div>
 
             <div id="visualizationembedded4"></div>
-
+            <div id="visualizationembedded2"></div>
 
         </div>
         <div class="float">
+            <div class=" leftcontent">
+                <h1>
 
+                    World happiness report
+
+
+                </h1>
+
+                <canvas id="label3" width="459" height="30"></canvas>
+                <p>
+
+                    nihaonihaonihao
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div id="slider" style="filter:hue-rotate(172deg);">
+                        <div id="oldchildslider"></div>
+                    </div>
+            </div>
 
             <div id="visualizationembedded5"></div>
-
+            <div id="visualizationembedded6"></div>
 
         </div>
 
@@ -133,6 +157,15 @@
         "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/SupermartGrocerySalesBubble.vl.json";
 
     vegaEmbed('#visualizationembedded5', visualization5).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+</script>
+
+<script type="text/javascript">
+    var visualization6 =
+        "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Json/FoodConsumptionDetail.vl.json";
+
+    vegaEmbed('#visualizationembedded6', visualization6).then(function (result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 </script>
@@ -193,7 +226,7 @@
 
     <script type="text/javascript">
         function draw() {
-            var canvas = document.getElementById('label');
+            var canvas = document.getElementById('label1');
             if (!canvas.getContext) return;
             var ctx = canvas.getContext("2d");
             ctx.strokeStyle = "rgb(107,63,50)";
@@ -207,7 +240,38 @@
         }
         draw();
     </script>
+    <script type="text/javascript">
+        function draw() {
+            var canvas = document.getElementById('label2');
+            if (!canvas.getContext) return;
+            var ctx = canvas.getContext("2d");
+            ctx.strokeStyle = "rgb(107,63,50)";
+            ctx.beginPath();
+            ctx.moveTo(459, 8);
+            ctx.lineTo(0, 22);
 
+            ctx.lineWidth = 5;
+            ctx.closePath();
+            ctx.stroke();
+        }
+        draw();
+    </script>
+        <script type="text/javascript">
+            function draw() {
+                var canvas = document.getElementById('label3');
+                if (!canvas.getContext) return;
+                var ctx = canvas.getContext("2d");
+                ctx.strokeStyle = "rgb(107,63,50)";
+                ctx.beginPath();
+                ctx.moveTo(459, 8);
+                ctx.lineTo(0, 22);
+    
+                ctx.lineWidth = 5;
+                ctx.closePath();
+                ctx.stroke();
+            }
+            draw();
+        </script>
 </body>
 
 </html>

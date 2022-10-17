@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 880,
-  "height": 500,
+  "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/xiaoyanshu1999/Assignment2_Yifan/main/Data/DomesticTouristVisits.csv"
   },
