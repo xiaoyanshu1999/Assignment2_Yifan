@@ -5,7 +5,7 @@
   "background": {
     "expr": "null"
   },
-  "columns": 2,
+  "columns": 3,
 
   "spec": {
     "projection": {
