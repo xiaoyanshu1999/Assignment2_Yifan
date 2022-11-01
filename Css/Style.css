@@ -349,3 +349,11 @@ body {
     height: auto;
 
 }
+
+.leftconten2 {
+    float: left;
+    padding-left: 150px;
+    height: 50px;
+    width: auto;
+
+}
